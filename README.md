@@ -1,4 +1,27 @@
 
+# Wyoming Software Fork Notes
+This fork of the **cordova-plugin-background-mode** plugin was created for an issue when Ionic apps crash on launch
+if the app is using the **cordova-plugin-wkwebview-engine** plugin.
+
+Credit is due **5uper** for the fix which you will see in the commit log. This fork simply adds his update to the
+README so developers can understand the fix better and for our own use should the 5uper repo ever get deleted.
+
+Hopefully this fork will no longer be needed if the original repo gets fixed but as of this fork it has not seen
+activity in several months. We are opening an issue **@katzer/cordova-plugin-background-mode.git** to make them aware of the fix.
+
+To use this version version (optionally with Ionic Native):
+
+    $ cordova plugin add https://github.com/WyomingSoftware/cordova-plugin-background-mode.git
+
+    $ npm install --save @ionic-native/background-mode
+
+---
+
+#### End of Wyoming Software Fork Notes
+
+---
+
+
 <p align="left">
     <b><a href="https://github.com/katzer/cordova-plugin-background-mode/tree/example">SAMPLE APP</a> :point_right:</b>
 </p>
@@ -174,7 +197,7 @@ Various APIs like playing media or tracking GPS position in background might not
 
 ```js
 cordova.plugins.backgroundMode.on('activate', function() {
-   cordova.plugins.backgroundMode.disableWebViewOptimizations(); 
+   cordova.plugins.backgroundMode.disableWebViewOptimizations();
 });
 ```
 
